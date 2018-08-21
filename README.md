@@ -10,7 +10,7 @@
 
 ## Demo
 
-![How to deploy a stack](https://github.com/mastappl/images/blob/master/mongo.gif)
+![How to deploy a stack](https://github.com/mastappl/images/blob/master/mongo_replica.gif)
 
 ## Minimal recommended configuration:
 

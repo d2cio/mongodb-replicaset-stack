@@ -11,7 +11,7 @@ services:
     deployTo:
       - primary
       - secondary
-      - secondaryTwo
+      - secondary-two
 
   - name: mongo-express
     type: nodejs
@@ -62,7 +62,7 @@ hosts:
       cores: 1
       memory: 1
 
-  - name: secondaryTwo
+  - name: secondary-two
     requirements:
       cores: 1
       memory: 1
