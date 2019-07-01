@@ -14,15 +14,11 @@ services:
       - secondary-two
 
   - name: mongo-express
-    type: nodejs
-    version: 10
+    type: docker
+    image: mongo-express
+    version: latest
     ports:
-      - 8081
-    source:
-      type: git
-      url: https://github.com/mongo-express/mongo-express
-    localDeps: "npm install\nnpm run build"
-    startCommand: npm start
+      - 8081 
     env:
       ME_CONFIG_MONGODB_URL: "mongodb://{{=service('mongo').getMasterAlias()}},{{=service('mongo').getSlaveAlias()}}/?replicaSet={{=service('mongo').get('name')}}&readPreference=secondaryPreferred"
       ME_CONFIG_MONGODB_ENABLE_ADMIN: true
